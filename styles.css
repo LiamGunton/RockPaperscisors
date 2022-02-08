@@ -11,7 +11,10 @@ body {
   align-items: center;
   height: 100vh;
 }
-
+.player-icons {
+  display: flex;
+  flex-direction: row;
+}
 .emoji {
   font-size: 10rem;
   cursor: pointer;
@@ -25,6 +28,13 @@ body {
   display: none;
 }
 
+.player-emoji {
+  font-size: 6rem;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+  border-radius: 0.2em;
+}
 .text {
   font-size: 5rem;
   display: none;

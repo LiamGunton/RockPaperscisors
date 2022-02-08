@@ -9,12 +9,18 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <p class="emoji start active">🟢</p>
-    <p class="game-emoji rock">👊</p>
-    <p class="game-emoji paper">✋</p>
-    <p class="game-emoji scisors">🖖</p>
+    <div class="game-emoji rock">👊</div>
+    <div class="game-emoji paper">✋</div>
+    <div class="game-emoji scisors">🖖</div>
+
+    <div class="player-icons">
+      <div class="player-emoji player-rock active">👊</div>
+      <div class="player-emoji player-paper active">✋</div>
+      <div class="player-emoji player-scisors active">🖖</div>
+    </div>
+
     <p class="text win-text">congratlations you win!!</p>
+    <p class="text tie-text">TIE!!!</p>
     <p class="text lose-text">Oops better luck next time</p>
-    <button class="emoji refresh active">Refresh🔄</button>
   </body>
 </html>
