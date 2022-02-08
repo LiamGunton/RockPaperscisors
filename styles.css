@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.emoji {
+  font-size: 10rem;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}
+.game-emoji {
+  font-size: 10rem;
+  cursor: pointer;
+  user-select: none;
+  display: none;
+}
+
+.text {
+  font-size: 5rem;
+  display: none;
+}
+
+.active {
+  display: block;
+}
+.refresh {
+  font-size: 2.5em;
+  cursor: pointer;
+  user-select: none;
+}
