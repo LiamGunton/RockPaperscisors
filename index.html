@@ -1,3 +1,9 @@
+<!-- 
+    Name:   Liam Gunton -LiamGunton3@gmail.com
+    Date:   Feb 02/2022
+    Purpose:Rock Paper Scisors game 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,18 +15,25 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="game-emoji rock">👊</div>
-    <div class="game-emoji paper">✋</div>
-    <div class="game-emoji scisors">🖖</div>
-
+    <div class="title">
+      <p class="title-text">Click Rock Paper or Scisors</p>
+    </div>
+    <div>
+      <div class="game-emoji rock">👊</div>
+      <div class="game-emoji paper">✋</div>
+      <div class="game-emoji scisors">✌️</div>
+    </div>
     <div class="player-icons">
       <div class="player-emoji player-rock active">👊</div>
       <div class="player-emoji player-paper active">✋</div>
-      <div class="player-emoji player-scisors active">🖖</div>
+      <div class="player-emoji player-scisors active">✌️</div>
     </div>
 
-    <p class="text win-text">congratlations you win!!</p>
-    <p class="text tie-text">TIE!!!</p>
-    <p class="text lose-text">Oops better luck next time</p>
+    <div class="text-box">
+      <p class="text win-text">Congratlations you win!!</p>
+      <p class="text tie-text">TIE!!!</p>
+      <p class="text lose-text">Oops better luck next time</p>
+      <p class="results active"></p>
+    </div>
   </body>
 </html>

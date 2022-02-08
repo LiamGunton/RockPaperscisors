@@ -1,3 +1,8 @@
+/*
+    Name:   Liam Gunton -LiamGunton3@gmail.com
+    Date:   Feb 02/2022
+    Purpose:Rock Paper Scisors game
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,13 +40,25 @@ body {
   display: none;
   border-radius: 0.2em;
 }
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .text {
   font-size: 5rem;
   display: none;
 }
+.title-text {
+  font-size: 5rem;
+}
+.title {
+  display: flex;
+}
 
 .active {
-  display: block;
+  display: flex;
 }
 .refresh {
   font-size: 2.5em;

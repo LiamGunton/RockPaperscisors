@@ -1,3 +1,9 @@
+/*
+    Name:   Liam Gunton -LiamGunton3@gmail.com
+    Date:   Feb 02/2022
+    Purpose:Rock Paper Scisors game
+*/
+const body = document.querySelector("body");
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scisors = document.querySelector(".scisors");
@@ -11,9 +17,13 @@ const playerEmoji = document.querySelectorAll(".player-emoji");
 const winText = document.querySelector(".win-text");
 const tieText = document.querySelector(".tie-text");
 const loseText = document.querySelector(".lose-text");
+const resultDisplay = document.querySelector(".results");
 const text = document.querySelectorAll(".text");
 
 let cpuChoice = new Array("rock", "paper", "scisors");
+let winCount = 0;
+let loseCount = 0;
+let tieCount = 0;
 
 playerRock.addEventListener("click", startGame);
 playerPaper.addEventListener("click", startGame);
@@ -33,7 +43,6 @@ function startGame(e) {
   }
 
   let rand = Math.floor(Math.random() * 3);
-  console.log(cpuChoice[rand]);
   if (cpuChoice[rand] == "rock") {
     rock.classList.add("active");
   } else if (cpuChoice[rand] === "paper") {
@@ -44,34 +53,58 @@ function startGame(e) {
 
   switch (true) {
     case tmp.classList.contains("player-rock"):
-      tmp.style.background = "lightgray";
       if (rock.classList.contains("active")) {
-        tieText.classList.add("active");
+        tie(tmp);
       } else if (paper.classList.contains("active")) {
-        loseText.classList.add("active");
+        win(tmp);
       } else {
-        winText.classList.add("active");
+        lose(tmp);
       }
       break;
     case tmp.classList.contains("player-paper"):
       tmp.style.background = "lightgray";
       if (rock.classList.contains("active")) {
-        winText.classList.add("active");
+        win(tmp);
       } else if (paper.classList.contains("active")) {
-        tieText.classList.add("active");
+        tie(tmp);
       } else {
-        loseText.classList.add("active");
+        lose(tmp);
       }
       break;
     case tmp.classList.contains("player-scisors"):
       tmp.style.background = "lightgray";
       if (rock.classList.contains("active")) {
-        loseText.classList.add("active");
+        lose(tmp);
       } else if (paper.classList.contains("active")) {
-        winText.classList.add("active");
+        win(tmp);
       } else {
-        tieText.classList.add("active");
+        tie(tmp);
       }
       break;
   }
+}
+function tie(tmp) {
+  tieCount++;
+  tieText.classList.add("active");
+  body.style.background = "orange";
+  tmp.style.background = "darkOrange";
+  displayResults();
+}
+function win(tmp) {
+  winCount++;
+  winText.classList.add("active");
+  body.style.background = "green";
+  tmp.style.background = "darkgreen";
+  displayResults();
+}
+function lose(tmp) {
+  loseCount++;
+  loseText.classList.add("active");
+  body.style.background = "red";
+  tmp.style.background = "darkred";
+  displayResults();
+}
+
+function displayResults() {
+  resultDisplay.innerHTML = `Wins: ${winCount} <br>Losses: ${loseCount} <br>Ties: ${tieCount}`;
 }
