@@ -56,9 +56,10 @@ function startGame(e) {
       if (rock.classList.contains("active")) {
         tie(tmp);
       } else if (paper.classList.contains("active")) {
-        win(tmp);
-      } else {
         lose(tmp);
+      } else {
+
+        win(tmp);
       }
       break;
     case tmp.classList.contains("player-paper"):
